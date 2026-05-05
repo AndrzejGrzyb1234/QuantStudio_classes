@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CsvReader.cpp" />
     <ClCompile Include="Curve.cpp" />
     <ClCompile Include="LinearCurve.cpp" />
     <ClCompile Include="LogLinearCurve.cpp" />
@@ -134,10 +135,14 @@
     <ClCompile Include="QuantStudio_classes.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CsvReader.h" />
     <ClInclude Include="Curve.h" />
     <ClInclude Include="LinearCurve.h" />
     <ClInclude Include="LogLinearCurve.h" />
     <ClInclude Include="PiecewiseConstant.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
