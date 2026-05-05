@@ -1,6 +1,3 @@
-// QuantStudio_classes.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <vector>
 
@@ -9,6 +6,7 @@
 #include "PiecewiseConstant.h"
 #include "LogLinearCurve.h"
 
+// Demonstration program for the available interpolation schemes.
 int main()
 {
     std::cout << "Hello World!\n";
@@ -16,10 +14,10 @@ int main()
     std::vector<double> x{ 0,1,2,3,4 };
     std::vector<double> y{ 100,200,50,400,405 };
 
-    // Chooseing method:
+    // Select the interpolation scheme for demonstration purposes.
     Curve* curve = new LinearCurve(x, y);
-    //Curve* curve = new PiecewiseConstant(x, y);
-    //Curve* curve = new LogLinearCurve(x, y);
+    // Curve* curve = new PiecewiseConstant(x, y);
+    // Curve* curve = new LogLinearCurve(x, y);
 
     std::cout << "x     y\n";
 
@@ -32,6 +30,3 @@ int main()
     delete curve;
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu

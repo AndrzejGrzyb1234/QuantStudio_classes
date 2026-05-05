@@ -2,7 +2,7 @@
 #include <cmath>
 #include <stdexcept>
 
-// Logarytmic intarpolation
+// Piecewise log-linear interpolation.
 double LogLinearCurve::f(double x) const
 {
     for (size_t i = 0; i < _xValues.size() - 1; i++)
@@ -14,9 +14,9 @@ double LogLinearCurve::f(double x) const
             double y0 = _yValues[i];
             double y1 = _yValues[i + 1];
 
-            // safe
+            // Ensure that the logarithm is applied only to positive values.
             if (y0 <= 0 || y1 <= 0)
-                throw std::runtime_error("Log z liczby <= 0!");
+                throw std::runtime_error("Log of a number <= 0!");
 
             double logy0 = std::log(y0);
             double logy1 = std::log(y1);

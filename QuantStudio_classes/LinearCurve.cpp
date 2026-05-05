@@ -1,6 +1,6 @@
 #include "LinearCurve.h"
 
-// Linear intarpolation
+// Piecewise linear interpolation.
 double LinearCurve::f(double x) const
 {
     for (size_t i = 0; i < _xValues.size() - 1; i++)
