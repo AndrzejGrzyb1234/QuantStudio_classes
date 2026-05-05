@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="QuantStudio_classes/QuantStudio_classes.vcxproj" />
+  <Project Path="QuantStudio_classes/QuantStudio_classes.vcxproj" Id="ae873f0a-389d-40b3-90da-235ab866eb85" />
 </Solution>
