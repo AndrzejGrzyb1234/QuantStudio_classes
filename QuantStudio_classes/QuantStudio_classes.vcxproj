@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Curve.cpp" />
+    <ClCompile Include="LinearCurve.cpp" />
+    <ClCompile Include="LogLinearCurve.cpp" />
+    <ClCompile Include="PiecewiseConstant.cpp" />
     <ClCompile Include="QuantStudio_classes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Curve.h" />
+    <ClInclude Include="LinearCurve.h" />
+    <ClInclude Include="LogLinearCurve.h" />
+    <ClInclude Include="PiecewiseConstant.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

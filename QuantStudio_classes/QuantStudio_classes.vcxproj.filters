@@ -18,5 +18,31 @@
     <ClCompile Include="QuantStudio_classes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LinearCurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Curve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PiecewiseConstant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogLinearCurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinearCurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Curve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PiecewiseConstant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogLinearCurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
