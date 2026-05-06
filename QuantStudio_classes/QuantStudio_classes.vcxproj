@@ -132,6 +132,9 @@
     <ClCompile Include="Curve.cpp" />
     <ClCompile Include="LinearCurve.cpp" />
     <ClCompile Include="LogLinearCurve.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MatrixConsoleApplication.cpp" />
+    <ClCompile Include="MatrixInputReader.cpp" />
     <ClCompile Include="PiecewiseConstant.cpp" />
     <ClCompile Include="QuantStudio_classes.cpp" />
   </ItemGroup>
@@ -141,6 +144,9 @@
     <ClInclude Include="Curve.h" />
     <ClInclude Include="LinearCurve.h" />
     <ClInclude Include="LogLinearCurve.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MatrixConsoleApplication.h" />
+    <ClInclude Include="MatrixInputReader.h" />
     <ClInclude Include="PiecewiseConstant.h" />
   </ItemGroup>
   <ItemGroup>

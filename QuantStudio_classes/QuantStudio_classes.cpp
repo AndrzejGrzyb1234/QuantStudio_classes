@@ -3,9 +3,17 @@
 #include <limits>
 
 #include "CurveConsoleApplication.h"
+#include "MatrixConsoleApplication.h"
 
 namespace
 {
+enum class MainMenuChoice
+{
+    Curves = 1,
+    Matrices = 2,
+    Exit = 3
+};
+
 void resetInputStream()
 {
     std::cin.clear();
@@ -23,13 +31,14 @@ bool tryReadChoice(int& choice)
     return true;
 }
 
-bool showInitialMenu()
+MainMenuChoice showInitialMenu()
 {
     while (true)
     {
         std::cout << "What would you like to do?\n";
         std::cout << "1. Choose data set and curve for calculations\n";
-        std::cout << "2. Exit\n";
+        std::cout << "2. Perform matrix operations\n";
+        std::cout << "3. Exit\n";
         std::cout << "Choice: ";
 
         int initialActionChoice = 0;
@@ -37,20 +46,20 @@ bool showInitialMenu()
 
         std::cout << '\n';
 
-        if (!hasValidInput || (initialActionChoice != 1 && initialActionChoice != 2))
+        if (!hasValidInput || (initialActionChoice < 1 || initialActionChoice > 3))
         {
             std::cout << "Invalid choice. Returning to the selection menu.\n\n";
             continue;
         }
 
-        return initialActionChoice == 1;
+        return static_cast<MainMenuChoice>(initialActionChoice);
     }
 }
 
 bool shouldRunAgain()
 {
     std::cout << "\nWhat would you like to do next?\n";
-    std::cout << "1. Choose data set and curve again\n";
+    std::cout << "1. Return to the selection menu\n";
     std::cout << "2. Exit\n";
     std::cout << "Choice: ";
 
@@ -67,6 +76,25 @@ bool shouldRunAgain()
 
     return nextActionChoice == 1;
 }
+
+void runSelectedApplication(MainMenuChoice selectedApplication,
+    const CurveConsoleApplication& curveApplication,
+    const MatrixConsoleApplication& matrixApplication)
+{
+    // Keeping the main menu dispatch here makes it easy to plug new features
+    // into the program without moving logic back into the specialized classes.
+    switch (selectedApplication)
+    {
+    case MainMenuChoice::Curves:
+        curveApplication.run();
+        break;
+    case MainMenuChoice::Matrices:
+        matrixApplication.run();
+        break;
+    case MainMenuChoice::Exit:
+        break;
+    }
+}
 }
 
 // Demonstration program for the available interpolation schemes.
@@ -74,16 +102,22 @@ int main()
 {
     try
     {
-        const CurveConsoleApplication application;
+        const CurveConsoleApplication curveApplication;
+        const MatrixConsoleApplication matrixApplication;
 
         while (true)
         {
-            if (!showInitialMenu())
+            const MainMenuChoice selectedApplication = showInitialMenu();
+
+            if (selectedApplication == MainMenuChoice::Exit)
             {
                 return 0;
             }
 
-            application.run();
+            runSelectedApplication(
+                selectedApplication,
+                curveApplication,
+                matrixApplication);
 
             if (!shouldRunAgain())
             {

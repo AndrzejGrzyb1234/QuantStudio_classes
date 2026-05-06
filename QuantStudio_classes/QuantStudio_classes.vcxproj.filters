@@ -18,6 +18,15 @@
     <ClCompile Include="CurveConsoleApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixConsoleApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixInputReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="QuantStudio_classes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,6 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CurveConsoleApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixConsoleApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixInputReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LinearCurve.h">
