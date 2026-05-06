@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CurveConsoleApplication.cpp" />
     <ClCompile Include="CsvReader.cpp" />
     <ClCompile Include="Curve.cpp" />
     <ClCompile Include="LinearCurve.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="QuantStudio_classes.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CurveConsoleApplication.h" />
     <ClInclude Include="CsvReader.h" />
     <ClInclude Include="Curve.h" />
     <ClInclude Include="LinearCurve.h" />

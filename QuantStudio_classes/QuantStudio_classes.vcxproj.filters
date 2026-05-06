@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CurveConsoleApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="QuantStudio_classes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -35,6 +38,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CurveConsoleApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LinearCurve.h">
       <Filter>Header Files</Filter>
     </ClInclude>
