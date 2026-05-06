@@ -20,6 +20,32 @@ int main()
 
         bool keepRunning = true;
 
+        std::cout << "What would you like to do?\n";
+        std::cout << "1. Choose data set and curve for calculations\n";
+        std::cout << "2. Exit\n";
+        std::cout << "Choice: ";
+
+        int initialActionChoice = 0;
+        if (!(std::cin >> initialActionChoice))
+        {
+            std::cout << "Invalid input. Proceeding to the selection menu.\n\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            initialActionChoice = 1;
+        }
+
+        if (initialActionChoice == 2)
+        {
+            return 0;
+        }
+
+        if (initialActionChoice != 1)
+        {
+            std::cout << "Invalid choice. Proceeding to the selection menu.\n";
+        }
+
+        std::cout << '\n';
+
         while (keepRunning)
         {
             std::vector<double> x;
